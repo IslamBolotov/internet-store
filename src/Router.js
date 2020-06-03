@@ -7,6 +7,7 @@ const Router = () =>{
     return(
         <BrowserRouter>
             <Footer />
+            
         </BrowserRouter>
     )
 }
