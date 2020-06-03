@@ -1,27 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route} from 'react-router-dom'
 import './App.css';
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Catalog from './pages/Catalog'
+import Hudlitr from './pages/Hudlitr'
+
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          hi guys hi guys
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reactss
-        </a>
-      </header>
-    </div>
+ <BrowserRouter>
+  <div>
+    <Route exact path="/" component = {Home} />
+    <Route path="/about" component = {About} />
+    <Route path="/contact" component = {Contact} />
+    <Route path="/catalog" component = {Catalog} />
+    <Route path="/hudlitr" component = {Hudlitr} />
+
+
+
+  </div>
+ 
+ 
+ </BrowserRouter>
   );
 }
 
