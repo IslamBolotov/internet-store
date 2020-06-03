@@ -39,11 +39,30 @@ class Navbar extends Component {
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <Link class="dropdown-item" to="/hudlitr">Художественная Литература</Link>
-                        <a class="dropdown-item" href="#">История</a>
-                        <a class="dropdown-item" href="#">Фантастика</a>
+                        <Link class="dropdown-item" to="/proza"> Проза</Link>
+                        <Link class="dropdown-item" to="/priklyucheniya"> Приключения</Link>
+                        <Link class="dropdown-item" to="/poeziya"> Поэзия</Link>
+                        <Link class="dropdown-item" to="/fantasy"> Фэнтези</Link>
+                        <Link class="dropdown-item" to="/romans"> Любовный</Link>
+                        <Link class="dropdown-item" to="/humor"> Юмор</Link>
+                        <Link class="dropdown-item" to="/fantastic"> Научная Фантастика</Link>
+                        <Link class="dropdown-item" to="/forchild"> Детское</Link>
+                        <Link class="dropdown-item" to="/detective">Детектив </Link>
+                        <Link class="dropdown-item" to="/religions"> Религия и Духовность</Link>
+                        <Link class="dropdown-item" to="/drams"> Драма</Link>
+                        <Link class="dropdown-item" to="/horrors"> Ужасы</Link>
+                        <Link class="dropdown-item" to="/myths">Мифы и Легенды</Link>
+                        <Link class="dropdown-item" to="/thriller"> Триллер</Link>
+                        <Link class="dropdown-item" to="/biography"> Биография</Link>
+
+
                       </div>
                     </div>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/basket">
+                    <button type="button" class="btn btn-warning">Корзина</button>
                   </Link>
                 </li>
               </ul>
@@ -57,3 +76,4 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
