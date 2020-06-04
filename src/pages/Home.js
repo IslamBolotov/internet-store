@@ -7,7 +7,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Jumbotron title="Добро Пожаловать" subtitle="Тому, кто читает книги, никогда не скучно." />
                 <div className="container">
 

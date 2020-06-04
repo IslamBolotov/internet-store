@@ -34,7 +34,9 @@ class Navbar extends Component {
                   <Link className="nav-link" to="/catalog">
 
                     <div className="dropdown">
+
                       <button className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                         Каталог
                       </button>
 
@@ -56,13 +58,14 @@ class Navbar extends Component {
                         <Link className="dropdown-item" to="/biography"> Биография</Link>
 
 
+
                       </div>
                     </div>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/basket">
-                    <button type="button" class="btn btn-warning">Корзина</button>
+                    <button type="button" className="btn btn-warning">Корзина</button>
                   </Link>
                 </li>
               </ul>
