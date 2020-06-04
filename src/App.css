@@ -1,3 +1,10 @@
+
+
+.nav-bar{
+  padding: 10px;
+  background-color: darkcyan;
+}
+
 .btn {
   cursor: pointer;
 }
@@ -7,3 +14,62 @@
 
 }
 
+.nav-bar .active{
+  text-decoration: underline;
+}
+
+
+.footer{
+  display: flex;
+  color: #fff;
+  margin-top: 200px;
+  width: 100%;
+  background-color: rgb(83, 83, 134);
+  bottom: 0;
+}
+
+li{
+  list-style-type: none;
+}
+.footer > ul > li{
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #fff;
+}
+.footer-link-elements{
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link-main{
+  width: 30%;
+  font-size: 20px;
+}
+
+.footer-link-main > div {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 250px;
+  background-color: black;
+  height: 2px;
+}
+
+.img-inst{
+  width: 50px;
+  margin-top: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-sets{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task{
+  margin-left: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
