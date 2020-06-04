@@ -6,7 +6,6 @@ class About extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Jumbotron  title="О Компании" subtitle=""/>
                 <div className="container">
 

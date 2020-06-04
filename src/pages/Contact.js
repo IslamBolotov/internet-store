@@ -6,7 +6,6 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Jumbotron  title="Контакты" subtitle=""/>
                 <div className="container">
 
