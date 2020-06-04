@@ -55,10 +55,6 @@ function App() {
     <Route path="/biography" component = {Biography} />
 
 
-
-    
-   
-
     
 
   </div>
