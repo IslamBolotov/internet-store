@@ -25,6 +25,7 @@ import Myths from './Janres/Myths';
 import Thriller from './Janres/Thriller';
 import Biography from './Janres/Biography';
 import Basket from './pages/Basket';
+import AddBook from './components/AddBook/AddBook';
 
 
 
@@ -60,7 +61,9 @@ function App() {
       <Route path="/thriller" component = {Thriller} />
       <Route path="/biography" component = {Biography} />
   </div>
+
   <div>
+      
       <Router />
     </div>
  </BrowserRouter>
