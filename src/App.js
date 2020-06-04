@@ -16,10 +16,6 @@ import './App.css';
 function App() {
   return (
 
-  <BrowserRouter>
-   <div>
-     
-  
 
       <Router />
     </div>
@@ -28,3 +24,5 @@ function App() {
 }
 
 export default App;
+
+
