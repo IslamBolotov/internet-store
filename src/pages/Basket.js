@@ -5,7 +5,6 @@ import Jumbotron from '../components/Jumbotron'
 function Basket() {
         return (
             <div>
-                <Navbar />
                 <Jumbotron  title="Корзина пуста" subtitle=""/>
                 <div className="container">
 
