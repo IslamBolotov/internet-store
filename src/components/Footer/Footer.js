@@ -25,10 +25,10 @@ class  Footer extends Component {
             <li>+(996) 555 32 33 75</li>
             <li>+(996) 222 32 33 75</li>
             <div className="social-sets">
-              <li><img onClick={this.sss} src={inst} className="img-inst" ></img></li>
-              <li><img onClick={this.sss} src={facebook} className="img-inst" ></img></li>
-              <li><img onClick={this.sss} src={telegram} className="img-inst" ></img></li>
-              <li><img onClick={this.sss} src={whatsapp} className="img-inst" ></img></li>
+              <li><img onClick={this.sss} src={inst} className="img-inst" alt=""></img></li>
+              <li><img onClick={this.sss} src={facebook} className="img-inst" alt=""></img></li>
+              <li><img onClick={this.sss} src={telegram} className="img-inst" alt=""></img></li>
+              <li><img onClick={this.sss} src={whatsapp} className="img-inst" alt=""></img></li>
             
             </div>
           </ul>

@@ -6,7 +6,6 @@ class Catalog extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <Jumbotron  title="Каталог" subtitle=""/>
                 <div className="container">
 
