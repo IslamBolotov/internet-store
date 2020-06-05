@@ -11,7 +11,12 @@
 
 .menu {
   margin-top: 30px;
+  
 
+}
+
+.btn-primary {
+  
 }
 
 .nav-bar .active{
@@ -95,3 +100,4 @@ li{
   background-position: center;
   border: 2px solid #000;
 }
+
