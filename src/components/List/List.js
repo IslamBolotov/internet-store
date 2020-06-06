@@ -20,6 +20,7 @@ class List extends React.Component{
                 return
             }
             else if(item.genre === this.props.add){
+                item.status = false;
                 newData.push(item)
                 this.setState({ data :newData })
 

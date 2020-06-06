@@ -26,6 +26,9 @@ class Basket extends Component {
         this.setState({ sum })
     }   
 
+    componentDidUpdate = () => {
+    }
+
 
     render() {
         return (

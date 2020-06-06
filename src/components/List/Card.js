@@ -1,18 +1,35 @@
 import React from 'react';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 
 class Card extends React.Component{
     state = {
-        status: false,
+        status: false
+    }
+
+    componentDidMount= async ()=>{
+        const { contact } = this.props
+        const { data } =   await axios.get('http://localhost:8000/basket')
+        data.map(item =>{
+            
+            if(item.id == contact.id){
+                console.log(item);
+                this.setState({ status : true})
+                
+            }
+        })
     }
 
     handleAddBasket = async (id,contact) =>{
         const newData = {...contact}
         newData.quantity = 1;
+        newData.status = true;
         await axios.post('http://localhost:8000/basket',newData)
         this.setState( { status:true })
     }
+
+   
     
     render(){
 
@@ -45,8 +62,7 @@ class Card extends React.Component{
                 case "rus": var lang = 'Русский'; break;
                 case "eng": var lang = 'Английский(English)'; break;
                 case "kg": var lang = 'Кыргызский(Кыргызча)'; break;
-                
-                break;
+            
             
                 default:
                     break;
@@ -63,7 +79,8 @@ class Card extends React.Component{
                     <h6>Жанр: {newGenre}</h6>
                     <h6>Язык: {lang}</h6>
                 </div>
-                    <button className="basket-btn" onClick={()=> this.handleAddBasket(contact.id, contact)}>Добавить в карзину</button>
+                    <button className="basket-btn" style={this.state.status ? {display:"none"}: {display:"block"} } onClick={()=> this.handleAddBasket(contact.id, contact)}>Добавить в карзину</button>
+                    <button className="basket-"  style={this.state.status ? {display:"block"}: {display:"none"} }><Link to="/basket" >Перейти в Корзину</Link></button>
                     <button className="podrob-btn">Подробднее</button>
             </li>
         );      

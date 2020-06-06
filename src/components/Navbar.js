@@ -39,6 +39,7 @@ class Navbar extends Component {
                       </button>
 
                       <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <Link className="dropdown-item" to="/all"> Все товары</Link>
                         <Link className="dropdown-item" to="/proza"> Проза</Link>
                         <Link className="dropdown-item" to="/priklyucheniya"> Приключения</Link>
                         <Link className="dropdown-item" to="/poeziya"> Поэзия</Link>
