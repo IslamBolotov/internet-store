@@ -17,43 +17,47 @@ class Navbar extends Component {
               <ul className="navbar-nav">
                 <li className="nav-item active">
                   <Link className="nav-link" to="/">
-                    <button type="button" class="btn btn-primary">Главная</button>
+                    <button type="button" className="btn btn-primary">Главная</button>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    <button type="button" class="btn btn-primary">О Компании</button>
+                    <button type="button" className="btn btn-primary">О Компании</button>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/contact">
-                    <button type="button" class="btn btn-primary">Контакты</button>
+                    <button type="button" className="btn btn-primary">Контакты</button>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/catalog">
 
-                    <div class="dropdown">
-                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Каталог
-                      </a>
+                    <div className="dropdown">
 
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <Link class="dropdown-item" to="/proza"> Проза</Link>
-                        <Link class="dropdown-item" to="/priklyucheniya"> Приключения</Link>
-                        <Link class="dropdown-item" to="/poeziya"> Поэзия</Link>
-                        <Link class="dropdown-item" to="/fantasy"> Фэнтези</Link>
-                        <Link class="dropdown-item" to="/romans"> Любовный</Link>
-                        <Link class="dropdown-item" to="/humor"> Юмор</Link>
-                        <Link class="dropdown-item" to="/fantastic"> Научная Фантастика</Link>
-                        <Link class="dropdown-item" to="/forchild"> Детское</Link>
-                        <Link class="dropdown-item" to="/detective">Детектив </Link>
-                        <Link class="dropdown-item" to="/religions"> Религия и Духовность</Link>
-                        <Link class="dropdown-item" to="/drams"> Драма</Link>
-                        <Link class="dropdown-item" to="/horrors"> Ужасы</Link>
-                        <Link class="dropdown-item" to="/myths">Мифы и Легенды</Link>
-                        <Link class="dropdown-item" to="/thriller"> Триллер</Link>
-                        <Link class="dropdown-item" to="/biography"> Биография</Link>
+                      <button className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        Каталог
+                      </button>
+
+                      <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <Link className="dropdown-item" to="/all"> Все книги</Link>
+                        <Link className="dropdown-item" to="/proza"> Проза</Link>
+                        <Link className="dropdown-item" to="/priklyucheniya"> Приключения</Link>
+                        <Link className="dropdown-item" to="/poeziya"> Поэзия</Link>
+                        <Link className="dropdown-item" to="/fantasy"> Фэнтези</Link>
+                        <Link className="dropdown-item" to="/romans"> Любовный</Link>
+                        <Link className="dropdown-item" to="/humor"> Юмор</Link>
+                        <Link className="dropdown-item" to="/fantastic"> Научная Фантастика</Link>
+                        <Link className="dropdown-item" to="/forchild"> Детское</Link>
+                        <Link className="dropdown-item" to="/detective">Детектив </Link>
+                        <Link className="dropdown-item" to="/religions"> Религия и Духовность</Link>
+                        <Link className="dropdown-item" to="/drams"> Драма</Link>
+                        <Link className="dropdown-item" to="/horrors"> Ужасы</Link>
+                        <Link className="dropdown-item" to="/myths">Мифы и Легенды</Link>
+                        <Link className="dropdown-item" to="/thriller"> Триллер</Link>
+                        <Link className="dropdown-item" to="/biography"> Биография</Link>
+
 
 
                       </div>
@@ -62,7 +66,7 @@ class Navbar extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/basket">
-                    <button type="button" class="btn btn-warning">Корзина</button>
+                    <button type="button" className="btn btn-warning">Корзина</button>
                   </Link>
                 </li>
               </ul>

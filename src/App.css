@@ -11,7 +11,12 @@
 
 .menu {
   margin-top: 30px;
+  
 
+}
+
+.btn-primary {
+  
 }
 
 .nav-bar .active{
@@ -73,3 +78,26 @@ li{
   display: flex;
   flex-direction: column;
 }
+
+.contact{
+  border: 1px solid black;
+  width: 300px;
+  padding: 15px;
+}
+
+.listing{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 15px;
+}
+
+
+.photo-block {
+  width: 150px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #000;
+}
+
