@@ -15,8 +15,10 @@ body{
 
 .menu {
   margin-top: 30px;
+  
 
 }
+
 
 .nav-bar .active{
   text-decoration: underline;
@@ -106,6 +108,7 @@ li{
   background-position: center;
   border: 2px solid #000;
 }
+
 
 .table-basket{
   margin: 25px auto auto 10%;
