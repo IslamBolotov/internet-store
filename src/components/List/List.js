@@ -8,18 +8,7 @@ class List extends React.Component{
         data:[]
     }
 
-    // componentDidMount(){
-    //     this.fetchContact();
-        
-    // }
 
-    // componentDidUpdate(){
-    //     this.fetchContact();
-    // }
-
-    componentWillUnmount(){
-        
-    }
 
     componentDidMount = async () => {
         const { data } = await axios.get('http://localhost:8000/books')
@@ -31,8 +20,7 @@ class List extends React.Component{
                 return
             }
             else if(item.genre === this.props.add){
-
-                console.log(this.props.add);
+                item.status = false;
                 newData.push(item)
                 this.setState({ data :newData })
 
@@ -42,6 +30,7 @@ class List extends React.Component{
         
     }
 
+  
     
     
 
@@ -57,7 +46,8 @@ class List extends React.Component{
                             key = {contact.id}
                             contact = {contact}
                         />
-                    ))}
+                        ))}
+                        
                 </ul>
             </>
         )
