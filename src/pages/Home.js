@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar'
 import Jumbotron from '../components/Jumbotron'
 import { Carousel } from 'react-bootstrap'
+
 
 class Home extends Component {
     render() {

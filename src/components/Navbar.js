@@ -17,28 +17,39 @@ class Navbar extends Component {
               <ul className="navbar-nav">
                 <li className="nav-item active">
                   <Link className="nav-link" to="/">
-                    <button type="button" class="btn btn-primary">Главная</button>
+                    <button type="button" className="btn btn-primary">Главная</button>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    <button type="button" class="btn btn-primary">О Компании</button>
+                    <button type="button" className="btn btn-primary">О Компании</button>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/contact">
-                    <button type="button" class="btn btn-primary">Контакты</button>
+                    <button type="button" className="btn btn-primary">Контакты</button>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/catalog">
 
                     <div className="dropdown">
-                      <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<<<<<<< HEAD
+
+                      <button className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+=======
+                      <button className="btn btn-secondary dropdown-toggle"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+>>>>>>> dev1
                         Каталог
-                      </a>
+                      </button>
 
                       <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<<<<<<< HEAD
+                        <Link className="dropdown-item" to="/all"> Все книги</Link>
+=======
+                        <Link className="dropdown-item" to="/all"> Все товары</Link>
+>>>>>>> dev1
                         <Link className="dropdown-item" to="/proza"> Проза</Link>
                         <Link className="dropdown-item" to="/priklyucheniya"> Приключения</Link>
                         <Link className="dropdown-item" to="/poeziya"> Поэзия</Link>
@@ -54,6 +65,9 @@ class Navbar extends Component {
                         <Link className="dropdown-item" to="/myths">Мифы и Легенды</Link>
                         <Link className="dropdown-item" to="/thriller"> Триллер</Link>
                         <Link className="dropdown-item" to="/biography"> Биография</Link>
+
+
+
                       </div>
                     </div>
                   </Link>

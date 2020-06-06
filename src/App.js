@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import  Router  from './Router';
 
@@ -17,14 +16,11 @@ function App() {
   return (
 
   <BrowserRouter>
-   <div>
-     
-  
-
       <Router />
-    </div>
  </BrowserRouter>
   )
 }
 
 export default App;
+
+
