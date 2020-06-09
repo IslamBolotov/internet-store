@@ -1,5 +1,9 @@
 
 
+body{
+  position: relative;
+}
+
 .nav-bar{
   padding: 10px;
   background-color: darkcyan;
@@ -15,9 +19,6 @@
 
 }
 
-.btn-primary {
-  
-}
 
 .nav-bar .active{
   text-decoration: underline;
@@ -80,9 +81,16 @@ li{
 }
 
 .contact{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
   border: 1px solid black;
-  width: 300px;
+  width: 400px;
   padding: 15px;
+}
+
+.contact > div > h6{
+  margin-bottom: 20px;
 }
 
 .listing{
@@ -104,6 +112,32 @@ li{
 .home {
 
 text-align: center;
+
+
+}
+.bookdetails {
+  display: block;
+  width: 500px;
+  margin-left: 430px;
+  margin-top: -400px;
+}
+
+.img {
+  
+  width: 420px;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #000;
+  /* margin-left: 100px; */
+  margin-top: 80px;
+
+}
+
+
+.contacts {
+  background: url(https://images6.alphacoders.com/397/thumb-1920-397921.jpg) no-repeat center;
+
 
 }
 

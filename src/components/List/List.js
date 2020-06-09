@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
 import axios from 'axios'
+import BookDetail from './Bookdetail';
+import {Route, Switch} from 'react-router-dom'
 
 
 class List extends React.Component{
@@ -8,18 +10,7 @@ class List extends React.Component{
         data:[]
     }
 
-    // componentDidMount(){
-    //     this.fetchContact();
-        
-    // }
 
-    // componentDidUpdate(){
-    //     this.fetchContact();
-    // }
-
-    componentWillUnmount(){
-        
-    }
 
     componentDidMount = async () => {
         const { data } = await axios.get('http://localhost:8000/books')
@@ -31,8 +22,7 @@ class List extends React.Component{
                 return
             }
             else if(item.genre === this.props.add){
-
-                console.log(this.props.add);
+                item.status = false;
                 newData.push(item)
                 this.setState({ data :newData })
 
@@ -42,14 +32,16 @@ class List extends React.Component{
         
     }
 
-    
-    
-
-  
 
     render(){
+
+        // console.log(this.state.data)
+
+
         return( 
             <>  
+                
+                
                 <ul className="listing">
                 
                     {this.state.data.map((contact) => (
@@ -57,8 +49,10 @@ class List extends React.Component{
                             key = {contact.id}
                             contact = {contact}
                         />
-                    ))}
+                        ))}
+                        
                 </ul>
+            
             </>
         )
     }
