@@ -1,54 +1,49 @@
 import React, { Component } from 'react';
 import Jumbotron from '../components/Jumbotron'
-import { Carousel } from 'react-bootstrap'
+import axios from 'axios';
+import HomeCard from './HomeCard'
+import Card from '../components/List/Card'
+
 
 
 class Home extends Component {
+
+    state = {
+        data:[],
+        data2:[]
+    }
+
+    componentDidMount = async ()=>{
+        const { data } = await axios.get(`http://localhost:8000/books?_sort=year&_order=desc`)
+        const newData = data.slice(0,5)
+        this.setState({ data: newData })
+
+        const  dataNew  = await axios.get(`http://localhost:8000/books?_sort=rating&_order=desc`)
+        const newData2 = dataNew.data.slice(0,5)
+        this.setState({ data2: newData2 })
+        
+      
+    }
+   
     render() {
         return (
             <div>
                 <Jumbotron title="Добро Пожаловать" subtitle="Тому, кто читает книги, никогда не скучно." />
                 <div className="container">
+                    <h1 style={{paddingBottom:"50px"}}>Новинки</h1>
+                <ul className="listing-home"> 
+                    {this.state.data.map(contact =>(
+                            <HomeCard contact={contact}/>
+                    ))}
+                </ul>
 
-                    <h2>Welcome to Book Store</h2>
+                <h1 style={{marginTop:"100px"}}>Популярные книги</h1>
+                <ul className="listing-home"> 
+                    {this.state.data2.map(contact =>(
+                            <HomeCard contact={contact}/>
+                    ))}
+                </ul>
 
-                    <Carousel>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://www.mirf.ru/wp-content/uploads/2019/05/oblozhki.jpg"
-                                alt="First slide"
-                            />
-                            <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://r5.readrate.com/img/pictures/basic/819/819105/8191057/w585h345-crop-stretch-491dde73.jpg"
-                                alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://bhub.com.ua/wp-content/uploads/2019/05/kn_00-1024x683.jpg"
-                                alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
                 </div>
             </div>
         )

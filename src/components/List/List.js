@@ -12,11 +12,12 @@ class List extends React.Component{
 
     componentDidMount = async () => {
         const { data } = await axios.get('http://localhost:8000/books')
+        const  data2  = await axios.get('http://localhost:8000/books?_start=0&_limit=10')
         if(JSON.stringify(this.state) === JSON.stringify({ data })) return;
         var newData=[]
         data.map(item =>{
             if(this.props.add === 'all'){
-                this.setState({ data });
+                this.setState({ data: data2.data });
                 return
             }
             else if(item.genre === this.props.add){

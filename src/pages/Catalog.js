@@ -1,57 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar'
 import Jumbotron from '../components/Jumbotron'
 
 class Contact extends Component {
 
-    // constructor(props){
-    //     super(props);
-    //     this.state ={
-    //       latitude: null,
-    //       longitude:null,
-    //       userAddress: null
-    //     };
-    //     this.getLocation = this.getLocation.bind(this)
-    //     this.getCoordinates = this.getCoordinates.bind(this)
-      
-      
-    //     }
-      
-    //     getLocation(){
-    //       if (navigator.geolocation) {
-    //         navigator.geolocation.getCurrentPosition(this.getCoordinates);
-    //       } else {
-    //          alert("Geolocation is not supported by this browser.");
-    //       }
-    //     }
-        
-    //     getCoordinates(position) {
-    //       this.setState({
-    //         latitude: position.coords.latitude,
-    //         longitude: position.coords.longitude
-    //       })
-    //     }
-      
-    //     render(){
-    //       return (
-    //         <div className="App">
-    //           <button onClick = {this.getLocation}>get coordinates</button>
-    //       <p>Latitude: {this.state.latitude}</p>
-    //       <p>Longitude: {this.state.longitude}</p>
-    //       <p>Address: {this.state.userAddress}</p>
-    //       {
-    //           this.state.latitude && this.state.longitude ?
-    //           <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=800x600&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=${`AIzaSyCgJuXnKuDsFbgLzhcjos8sxDTJq_WWB4w`}`} alt ='' />
-    //           : 
-    //           null
-    //       }
-      
-      
-      
-      
-    //         </div>
-    //       )
-    //     }
 
     render() {
         return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
-import HalfRating from './Rating';
+import HalfRating from '../components/List/Rating';
 
 
-class Card extends React.Component{
+class HomeCard extends React.Component{
     state = {
         status: false
     }
@@ -69,24 +69,50 @@ class Card extends React.Component{
             }
             
         return(
-            <li className='contact'>
-                <div className="photo-block" style={{backgroundImage:`url(${contact.photo})`}}>
+            <li className='contact-home' >
+                <div className="photo-block2" style={{backgroundImage:`url(${contact.photo})`}}>
+                <h6 style={{marginLeft:"20px",marginTop:"160px"}}>{contact.money} сом</h6>
                 </div>
                 <div>
                     <h6>Названия: {contact.name}</h6>
                     <h6>Автор: {contact.author}</h6>
-                    <h6>Стоимость: {contact.money} сом</h6>
                     <h6>Жанр: {newGenre}</h6>
                     <h6>Язык: {lang}</h6>
                     <h6>Год: {contact.year}</h6>
-                    <div><HalfRating  rate={contact.rating}/></div>
+                    <div style={{padding:"auto auto 0 auto"}}><HalfRating  rate={contact.rating}/></div>
                 </div>
-                    <button className="basket-btn" style={this.state.status ? {display:"none"}: {display:"block"} } onClick={()=> this.handleAddBasket(contact.id, contact)}>Добавить в карзину</button>
-                    <button className="basket-"  style={this.state.status ? {display:"block"}: {display:"none"} }><Link to="/basket" >Перейти в Корзину</Link></button>
-                    <button className="podrob-btn">Подробднее</button>
+                    <button className="basket-btn"
+                     style={this.state.status ? {display:"none"}: {display:"block",
+                     fontSize:"12px",
+                     width:"100px",
+                     height:"30px",
+                     marginTop:"auto",
+                     marginBottom:"5px"} }
+                     onClick={()=> this.handleAddBasket(contact.id, contact)}>
+                      в карзину
+                    </button>
+                    <button className="basket-" 
+                     style={this.state.status ? {display:"block",
+                     fontSize:"12px", 
+                     width:"100px",
+                     height:"30px",
+                     marginTop:"auto",
+                     marginBottom:"5px"}: {display:"none"} }>
+                       <Link to="/basket" >Корзину</Link>
+                    </button>
+                    <button className="podrob-btn" 
+                      style={{fontSize:"12px", 
+                      width:"100px",
+                      height:"30px",
+                      marginTop:"auto",
+                      marginBottom:"5px",
+                      marginRight:"15px",
+                      marginLeft:"auto"}}>
+                        Подробднее
+                    </button>
             </li>
         );      
     }   
 }
 
-export default Card;
+export default HomeCard
