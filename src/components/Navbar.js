@@ -34,22 +34,14 @@ class Navbar extends Component {
                   <Link className="nav-link" to="/catalog">
 
                     <div className="dropdown">
-<<<<<<< HEAD
 
                       <button className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-=======
-                      <button className="btn btn-secondary dropdown-toggle"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
->>>>>>> dev1
                         Каталог
                       </button>
 
                       <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-<<<<<<< HEAD
                         <Link className="dropdown-item" to="/all"> Все книги</Link>
-=======
-                        <Link className="dropdown-item" to="/all"> Все товары</Link>
->>>>>>> dev1
                         <Link className="dropdown-item" to="/proza"> Проза</Link>
                         <Link className="dropdown-item" to="/priklyucheniya"> Приключения</Link>
                         <Link className="dropdown-item" to="/poeziya"> Поэзия</Link>

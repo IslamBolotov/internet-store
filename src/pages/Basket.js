@@ -4,7 +4,9 @@ import BasketCard from './BasketCard';
 
 class Basket extends Component {
     state = {
-        data:[],
+        data:[
+
+        ],
         sum:0
     }
 

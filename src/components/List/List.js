@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card';
 import axios from 'axios'
+import BookDetail from './Bookdetail';
+import {Route, Switch} from 'react-router-dom'
 
 
 class List extends React.Component{
@@ -30,15 +32,16 @@ class List extends React.Component{
         
     }
 
-  
-    
-    
-
-  
 
     render(){
+
+        // console.log(this.state.data)
+
+
         return( 
             <>  
+                
+                
                 <ul className="listing">
                 
                     {this.state.data.map((contact) => (
@@ -49,6 +52,7 @@ class List extends React.Component{
                         ))}
                         
                 </ul>
+            
             </>
         )
     }
