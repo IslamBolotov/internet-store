@@ -37,6 +37,7 @@ class Basket extends Component {
 
     handleChangeComment =(event) =>{
         this.setState({comment: event.target.value})    
+
     }
 
     componentDidMount = async () =>{

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from '../components/Jumbotron'
+import { Carousel } from 'react-bootstrap'
+import '../App.css'
 import axios from 'axios';
 import HomeCard from './HomeCard'
 import Card from '../components/List/Card'
@@ -27,8 +29,8 @@ class Home extends Component {
    
     render() {
         return (
-            <div>
-                <Jumbotron title="Добро Пожаловать" subtitle="Тому, кто читает книги, никогда не скучно." />
+            <div className="homes">
+                {/* <Jumbotron title="Добро Пожаловать" subtitle="Тому, кто читает книги, никогда не скучно." /> */}
                 <div className="container">
                     <h1 style={{paddingBottom:"50px"}}>Новинки</h1>
                 <ul className="listing-home"> 
@@ -43,7 +45,6 @@ class Home extends Component {
                             <HomeCard contact={contact}/>
                     ))}
                 </ul>
-
                 </div>
             </div>
         )

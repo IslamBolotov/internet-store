@@ -14,7 +14,10 @@ class Card extends React.Component{
         const { data } =   await axios.get('http://localhost:8000/basket')
         data.map(item =>{
             
+
+           
             if(item.id === contact.id){
+
                 this.setState({ status : true})
                 
             }
@@ -29,9 +32,12 @@ class Card extends React.Component{
         this.setState( { status:true })
     }
 
+
    
     
     render(){
+
+    
 
             const { contact } = this.props;
             switch (contact.genre) {
@@ -73,7 +79,7 @@ class Card extends React.Component{
                 <div className="photo-block" style={{backgroundImage:`url(${contact.photo})`}}>
                 </div>
                 <div>
-                    <h6>Названия: {contact.name}</h6>
+                    <h6>Название: {contact.name}</h6>
                     <h6>Автор: {contact.author}</h6>
                     <h6>Стоимость: {contact.money} сом</h6>
                     <h6>Жанр: {newGenre}</h6>
@@ -81,9 +87,9 @@ class Card extends React.Component{
                     <h6>Год: {contact.year}</h6>
                     <div><HalfRating  rate={contact.rating}/></div>
                 </div>
-                    <button className="basket-btn" style={this.state.status ? {display:"none"}: {display:"block"} } onClick={()=> this.handleAddBasket(contact.id, contact)}>Добавить в карзину</button>
+                    <button className="basket-btn" style={this.state.status ? {display:"none"}: {display:"block"} } onClick={()=> this.handleAddBasket(contact.id, contact)}>Добавить в корзину</button>
                     <button className="basket-"  style={this.state.status ? {display:"block"}: {display:"none"} }><Link to="/basket" >Перейти в Корзину</Link></button>
-                    <button className="podrob-btn">Подробднее</button>
+                    <button className="podrob-btn"><Link to={`/product/${this.props.contact.id}`}>Подробнее</Link></button>
             </li>
         );      
     }   
