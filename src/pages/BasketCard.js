@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
+
 class BasketCard extends Component {
 
   state= {
@@ -23,8 +24,10 @@ class BasketCard extends Component {
   handleDeleteOrder = async () => {
     // this.setState({ onModal : false})
     const { contact } = this.state;
+    const { update } = this.props;
     await axios.delete(`http://localhost:8000/basket/${contact.id}`) 
     this.setState({ contact: null})
+    update();
   }
 
   componentDidMount(){
@@ -48,13 +51,13 @@ class BasketCard extends Component {
 
     return contact ? (
       <>
-        <tr>
-          <td>{contact.id}</td>
+        <tr className="table-row">
+          <td>{this.props.index+1}</td>
           <td>{contact.name}</td>
           <td>{contact.money}</td>
-          <td><input className="quantity-of-books" type="number" value={contact.quantity} onChange={(event)=>this.handleChange(event,contact)}></input></td>
-          <td>{contact.quantity*contact.money}</td>
-          <td><button onClick={this.handleDeleteOrder}>Удалить</button></td>
+          <td style={{textAlign:"center"}}><input className="quantity-of-books" type="number" value={contact.quantity} onChange={(event)=>this.handleChange(event,contact)}></input></td>
+          <td style={{textAlign:"right"}}>{contact.quantity*contact.money}</td>
+          <td style={{textAlign:"center"}}><button className="btn-delete" onClick={this.handleDeleteOrder}><img alt="" src="https://image.flaticon.com/icons/png/512/70/70757.png" style={{width:"30px"}} ></img></button></td>
         </tr>
       </>
     ) : null;

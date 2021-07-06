@@ -2,50 +2,49 @@ import React, { Component } from 'react';
 import Jumbotron from '../components/Jumbotron'
 import { Carousel } from 'react-bootstrap'
 import '../App.css'
+import axios from 'axios';
+import HomeCard from './HomeCard'
+import Card from '../components/List/Card'
 
 
 
 class Home extends Component {
+
+    state = {
+        data:[],
+        data2:[]
+    }
+
+    componentDidMount = async ()=>{
+        const { data } = await axios.get(`http://localhost:8000/books?_sort=year&_order=desc`)
+        const newData = data.slice(0,5)
+        this.setState({ data: newData })
+
+        const  dataNew  = await axios.get(`http://localhost:8000/books?_sort=rating&_order=desc`)
+        const newData2 = dataNew.data.slice(0,5)
+        this.setState({ data2: newData2 })
+        
+      
+    }
+   
     render() {
         return (
             <div className="homes">
                 {/* <Jumbotron title="Добро Пожаловать" subtitle="Тому, кто читает книги, никогда не скучно." /> */}
                 <div className="container">
+                    <h1 style={{paddingBottom:"50px"}}>Новинки</h1>
+                <ul className="listing-home"> 
+                    {this.state.data.map(contact =>(
+                            <HomeCard contact={contact}/>
+                    ))}
+                </ul>
 
-                    <h2 className="home">Welcome to Book Store</h2>
-
-                    <Carousel>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://cdn.waterstones.com/images/00155009-1366x379.jpeg"
-                                alt="First slide"
-                            />
-                            <Carousel.Caption>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://cdn.waterstones.com/images/00154744-1366x379.jpeg"
-                                alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://cdn.waterstones.com/images/00155307-1366x379.jpeg"
-                                alt="Third slide"
-                            />
-
-                            <Carousel.Caption>
-                               
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
+                <h1 style={{marginTop:"100px"}}>Популярные книги</h1>
+                <ul className="listing-home"> 
+                    {this.state.data2.map(contact =>(
+                            <HomeCard contact={contact}/>
+                    ))}
+                </ul>
                 </div>
             </div>
         )
